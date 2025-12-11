@@ -1,0 +1,174 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p,
+span,
+li,
+a,
+button,
+input,
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+.image-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+
+}
+
+.image-content.center {
+    justify-content: center;
+}
+
+.image-content.center .leyenda {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.image-content.center img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para bloques de código */
+.code-block {
+    position: relative;
+    margin: 20px 0;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.code-block button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+}
+
+.code-header {
+    background-color: #1e1e1e;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+.code-title {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.copy-btn {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.copy-btn.copied {
+    background-color: #198754;
+}
+
+.code-content {
+    padding: 15px;
+    overflow-x: auto;
+}
+
+.code-content pre {
+    margin: 0;
+    color: #f8f8f2;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.code-content code {
+    color: #f8f8f2;
+    background: none;
+}
+
+/* Sintaxis highlighting básico */
+.code-content .comment {
+    color: #6a9955;
+}
+
+.code-content .command {
+    color: #9cdcfe;
+}
+
+.code-content .flag {
+    color: #ce9178;
+}
