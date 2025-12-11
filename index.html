@@ -13,442 +13,519 @@
 </head>
 
 <body>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div id="theme-switcher" class="theme-switcher">
+                    <div class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <main>
         <div class="container py-4">
             <div class="row">
-                <div class="col-12">
-                    <article>
-                        <header>
-                            <h1 class="mb-4">Docker Capacitación</h1>
-                        </header>
-                        <section>
-                            <p>
-                                Docker es una plataforma de contenedores que permite a los desarrolladores crear,
-                                desplegar y
-                                gestionar aplicaciones de forma eficiente y escalable.
-                            </p>
-                            <div class="image-content center my-4">
-                                <img src="/assets/static/docker-containerized-and-vm-transparent-bg.png" alt="Docker"
-                                    class="img-fluid">
-                                <span class="leyenda">Arquitectura de Docker</span>
-                            </div>
-                        </section>
-                    </article>
+                <div class="col-12 col-lg-3">
+                    <aside class="floating-sidebar">
+                        <ul class="list-unstyled">
+                            <li><a href="#docker-capacitacion">Docker Capacitación</a></li>
+                            <li><a href="#principales-conceptos">Principales conceptos</a></li>
+                            <li><a href="#instalacion">Instalación</a></li>
+                            <li><a href="#dockerfile">Dockerfile</a></li>
+                            <li><a href="#imagen-de-docker">Imagen de Docker</a></li>
+                            <li><a href="#contenedor-de-docker">Contenedor de Docker</a></li>
+                            <li><a href="#comandos-basicos">Comandos básicos</a>
+                                <ul class="submenu">
+                                    <li><a href="#docker-pull">docker pull</a></li>
+                                    <li><a href="#docker-images">docker images</a></li>
+                                    <li><a href="#docker-ps">docker ps</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </aside>
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <article>
-                        <header>
-                            <h2 class="mb-3">Principales conceptos</h2>
-                        </header>
-                        <section>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <strong>Contenedor</strong>
-                                    <p class="mb-0">Un contenedor es una instancia de una imagen que se ejecuta en un
-                                        host. Es el entorno de ejecución de una aplicación.</p>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Imagen</strong>
-                                    <p class="mb-0">Una imagen es una plantilla para crear contenedores. Es el estado de
-                                        un contenedor en un momento dado.</p>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Volumen</strong>
-                                    <p class="mb-0">Un volumen es un espacio de almacenamiento persistente que se puede
-                                        montar en un contenedor. Es el estado de un contenedor en un momento dado.</p>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Red</strong>
-                                    <p class="mb-0">Una red es un conjunto de contenedores que se pueden comunicar entre
-                                        sí. Es el estado de un contenedor en un momento dado.</p>
-                                </li>
-                                <li class="list-group-item">
-                                    <strong>Dockerfile</strong>
-                                    <p class="mb-0">Un Dockerfile es un archivo que contiene las instrucciones para
-                                        crear una imagen. Es el estado de un contenedor en un momento dado.</p>
-                                </li>
-                            </ul>
-                        </section>
-                    </article>
-                </div>
-            </div>
-
-            <div class="row my-5">
-                <div class="col-lg-10 mx-auto">
-                    <article>
-                        <header>
-                            <h2 class="mb-3">Instalación</h2>
-                        </header>
-                        <section>
-                            <p>
-                                Para instalar Docker, se puede descargar el instalador desde el sitio oficial de Docker:
-                                <a href="https://www.docker.com/products/docker-desktop/" target="_blank">
-                                    https://www.docker.com/products/docker-desktop/
-                                </a>.
-                            </p>
-                            <div class="image-content center my-4">
-                                <img src="/assets/static/docker-desktop-installation.png"
-                                    alt="Docker Desktop Installation" class="img-fluid">
-                                <span class="leyenda">Instalación de Docker Desktop</span>
-                            </div>
-                        </section>
-                    </article>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-8 col-lg-12 mx-auto">
-                    <article>
-                        <header>
-                            <h2 class="mb-3">Dockerfile</h2>
-                        </header>
-                        <section>
-                            <p>
-                                Un Dockerfile es un archivo que contiene las instrucciones para crear una imagen. Es el
-                                estado de un contenedor en un momento dado.
-                            </p>
-                        </section>
-                    </article>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-8 col-lg-12 mx-auto">
-                    <article>
-                        <header>
-                            <h2 class="mb-3">Imagen de Docker</h2>
-                        </header>
-                        <section>
-                            <p>
-                                Una imagen de Docker es una plantilla para crear contenedores. Es el estado de un
-                                contenedor en un momento dado.
-                            </p>
-                        </section>
-                    </article>
-                </div>
-            </div>
-
-            <div class="row mb-5">
-                <div class="col-md-8 col-lg-12 mx-auto">
-                    <article>
-                        <header>
-                            <h2 class="mb-3">Contenedor de Docker</h2>
-                        </header>
-                        <section>
-                            <p>
-                                Un contenedor de Docker es una instancia de una imagen que se ejecuta en un host. Es el
-                                entorno de ejecución de una aplicación.
-                            </p>
-                            <div class="image-content center my-4">
-                                <img src="/assets/static/dockerfile.png" alt="Docker Container" class="img-fluid">
-                                <span class="leyenda">Contenedor de Docker</span>
-                            </div>
-                        </section>
-                    </article>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-12">
-                    <article>
-                        <header>
-                            <h2 class="mb-3">Comandos básicos</h2>
-                        </header>
-                        <section>
-                            <article id="docker-pull">
+                <div class="col-12 col-lg-9">
+                    <div class="row">
+                        <div class="col-12">
+                            <article id="docker-capacitacion">
                                 <header>
-                                    <h3 class="mb-3">docker pull</h3>
-                                    <p class="mb-5">
-                                        <span>
-                                            <strong>Uso:</strong>
+                                    <h1 class="mb-4">Docker Capacitación</h1>
+                                </header>
+                                <section>
+                                    <p>
+                                        Docker es una plataforma de contenedores que permite a los desarrolladores
+                                        crear,
+                                        desplegar y
+                                        gestionar aplicaciones de forma eficiente y escalable.
+                                    </p>
+                                    <div class="image-content center my-4">
+                                        <img src="/assets/static/docker-containerized-and-vm-transparent-bg.png"
+                                            alt="Docker" class="img-fluid">
+                                        <span class="leyenda">Arquitectura de Docker</span>
+                                    </div>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 mx-auto">
+                            <article id="principales-conceptos">
+                                <header>
+                                    <h2 class="mb-3">Principales conceptos</h2>
+                                </header>
+                                <section>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <strong>Contenedor</strong>
+                                            <p class="mb-0">Un contenedor es una instancia de una imagen que se ejecuta
+                                                en un
+                                                host. Es el entorno de ejecución de una aplicación.</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <strong>Imagen</strong>
+                                            <p class="mb-0">Una imagen es una plantilla para crear contenedores. Es el
+                                                estado de
+                                                un contenedor en un momento dado.</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <strong>Volumen</strong>
+                                            <p class="mb-0">Un volumen es un espacio de almacenamiento persistente que
+                                                se puede
+                                                montar en un contenedor. Es el estado de un contenedor en un momento
+                                                dado.</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <strong>Red</strong>
+                                            <p class="mb-0">Una red es un conjunto de contenedores que se pueden
+                                                comunicar entre
+                                                sí. Es el estado de un contenedor en un momento dado.</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <strong>Dockerfile</strong>
+                                            <p class="mb-0">Un Dockerfile es un archivo que contiene las instrucciones
+                                                para
+                                                crear una imagen. Es el estado de un contenedor en un momento dado.</p>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="row my-5">
+                        <div class="col-lg-12 mx-auto">
+                            <article id="instalacion">
+                                <header>
+                                    <h2 class="mb-3">Instalación</h2>
+                                </header>
+                                <section>
+                                    <p>
+                                        Para instalar Docker, se puede descargar el instalador desde el sitio oficial de
+                                        Docker:
+                                        <a href="https://www.docker.com/products/docker-desktop/" target="_blank">
+                                            https://www.docker.com/products/docker-desktop/
+                                        </a>.
+                                    </p>
+
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8 col-lg-12 mx-auto">
+                            <article id="dockerfile">
+                                <header>
+                                    <h2 class="mb-3">Dockerfile</h2>
+                                </header>
+                                <section>
+                                    <p>
+                                        Un Dockerfile es un archivo que contiene las instrucciones para crear una
+                                        imagen. Es el
+                                        estado de un contenedor en un momento dado.
+                                    </p>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8 col-lg-12 mx-auto">
+                            <article id="imagen-de-docker">
+                                <header>
+                                    <h2 class="mb-3">Imagen de Docker</h2>
+                                </header>
+                                <section>
+                                    <p>
+                                        Una imagen de Docker es una plantilla para crear contenedores. Es el estado de
+                                        un
+                                        contenedor en un momento dado.
+                                    </p>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5">
+                        <div class="col-md-8 col-lg-12 mx-auto">
+                            <article id="contenedor-de-docker">
+                                <header>
+                                    <h2 class="mb-3">Contenedor de Docker</h2>
+                                </header>
+                                <section>
+                                    <p>
+                                        Un contenedor de Docker es una instancia de una imagen que se ejecuta en un
+                                        host. Es el
+                                        entorno de ejecución de una aplicación.
+                                    </p>
+                                    <div class="image-content center my-4">
+                                        <img src="/assets/static/dockerfile.png" alt="Docker Container"
+                                            class="img-fluid">
+                                        <span class="leyenda">Contenedor de Docker</span>
+                                    </div>
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-12">
+                            <article id="comandos-basicos">
+                                <header>
+                                    <h2 class="mb-3">Comandos básicos</h2>
+                                </header>
+                                <section>
+                                    <article id="docker-pull">
+                                        <header>
+                                            <h3 class="mb-3">docker pull</h3>
+                                            <p class="mb-5">
+                                                <span>
+                                                    <strong>Uso:</strong>
+                                                    <div class="code-block my-3">
+                                                        <button class="btn btn-sm btn-light copy-btn"
+                                                            onclick="copyCode(this)">Copiar</button>
+
+                                                        <code
+                                                            class="code-content ">docker pull [OPTIONS] NAME[:TAG|@DIGEST]</code>
+
+
+                                                    </div>
+                                                    <br>
+                                                    Descarga una imagen desde un registro.
+                                                    <br><br>
+                                                    <strong>Alias:</strong> <code>docker image pull</code>,
+                                                    <code>docker pull</code>
+                                                    <br><br>
+                                                    <strong>Opciones comunes:</strong>
+                                                    <ul class="mt-2">
+                                                        <li>
+                                                            <div class="code-block ">
+                                                                <code class="code-content ">-a, --all-tags</code>
+                                                            </div> &nbsp; Descargar todas las etiquetas de la imagen en
+                                                            el
+                                                            repositorio
+                                                        </li>
+                                                        <li><code>--disable-content-trust</code> &nbsp; Omitir la
+                                                            verificación
+                                                            de la imagen (por defecto true)</li>
+                                                        <li><code>--platform string</code> &nbsp; Establece la
+                                                            plataforma si el
+                                                            servidor es multiarquitectura</li>
+                                                        <li><code>-q, --quiet</code> &nbsp; Suprime la salida detallada
+                                                        </li>
+                                                    </ul>
+                                                </span>
+                                            </p>
+                                            <p>
+                                                <strong>Ejemplo:</strong>
                                             <div class="code-block my-3">
                                                 <button class="btn btn-sm btn-light copy-btn"
                                                     onclick="copyCode(this)">Copiar</button>
-                                                <div class="code-block">
+                                                <code class="code-content ">docker pull ubuntu:latest</code>
+
+                                            </div>
+
+                                            Esto descargara la ultima imagen de la version ubuntu
+                                            </p>
+
+                                            <p>
+                                                Si ya estas usando una imagen de ubuntu, puedes usar docker pull para
+                                                asegurarte
+                                                de que tengas la ultima version.
+                                            </p>
+                                        </header>
+                                    </article>
+
+                                    <article id="docker-images">
+                                        <header>
+                                            <h2><code>docker images</code></h2>
+                                            <span>
+                                          
+                                                <p>Lista las imágenes disponibles localmente en tu máquina Docker.</p>
+                                                <strong>Alias:</strong>
+                                                <code>docker image ls</code>,
+                                                <code>docker image list</code>,
+                                                <code>docker images</code>
+                                                <br><br>
+                                                <strong>Uso:</strong>
+                                                <div class="code-block my-3">
+                                                    <button class="btn btn-sm btn-light copy-btn"
+                                                        onclick="copyCode(this)">Copiar</button>
                                                     <code
-                                                        class="code-content ">docker pull [OPTIONS] NAME[:TAG|@DIGEST]</code>
+                                                        class="code-content ">docker images [OPTIONS] [REPOSITORY[:TAG]]</code>
 
                                                 </div>
-                                            </div>
-                                            <br>
-                                            Descarga una imagen desde un registro.
-                                            <br><br>
-                                            <strong>Alias:</strong> <code>docker image pull</code>,
-                                            <code>docker pull</code>
-                                            <br><br>
-                                            <strong>Opciones comunes:</strong>
-                                            <ul class="mt-2">
-                                                <li>
-                                                    <div class="code-block ">
-                                                        <code class="code-content ">-a, --all-tags</code>
-                                                    </div> &nbsp; Descargar todas las etiquetas de la imagen en el
-                                                    repositorio
-                                                </li>
-                                                <li><code>--disable-content-trust</code> &nbsp; Omitir la verificación
-                                                    de la imagen (por defecto true)</li>
-                                                <li><code>--platform string</code> &nbsp; Establece la plataforma si el
-                                                    servidor es multiarquitectura</li>
-                                                <li><code>-q, --quiet</code> &nbsp; Suprime la salida detallada</li>
-                                            </ul>
-                                        </span>
-                                    </p>
-                                    <p>
-                                        <strong>Ejemplo:</strong>
-                                    <div class="code-block my-3">
-                                        <button class="btn btn-sm btn-light copy-btn"
-                                            onclick="copyCode(this)">Copiar</button>
-                                        <div class="code-block">
-                                            <code class="code-content ">docker pull ubuntu:latest</code>
-                                        </div>
-                                    </div>
+                                                <br>
+                                                <strong>Opciones comunes:</strong>
+                                                <ul class="mt-2">
+                                                    <li>
+                                                        <div class="code-block ">
+                                                            <code class="code-content ">-a, --all</code>
+                                                        </div>
+                                                        &nbsp; Muestra todas las imágenes (incluidas las intermedias)
+                                                    </li>
+                                                    <li>
+                                                        <div class="code-block ">
+                                                            <code class="code-content ">--digests</code>
+                                                        </div>
+                                                        &nbsp; Muestra los identificadores digest de las imágenes
+                                                    </li>
+                                                    <li>
+                                                        <div class="code-block ">
+                                                            <code class="code-content ">-f, --filter [filtro]</code>
+                                                        </div>
+                                                        &nbsp; Filtra la salida según condición (por ejemplo,
+                                                        <code>dangling=true</code> para ver imágenes huérfanas)
+                                                    </li>
+                                                    <li>
+                                                        <div class="code-block ">
+                                                            <code class="code-content ">--format [string]</code>
+                                                        </div>
+                                                        &nbsp; Personaliza la salida usando plantillas Go (ver la <a
+                                                            href="https://docs.docker.com/go/formatting/"
+                                                            target="_blank">documentación oficial</a>)
+                                                    </li>
+                                                    <li>
+                                                        <div class="code-block ">
+                                                            <code class="code-content ">--no-trunc</code>
+                                                        </div>
+                                                        &nbsp; No trunca la salida (muestra los hashes completos)
+                                                    </li>
+                                                    <li>
+                                                        <div class="code-block ">
+                                                            <code class="code-content ">-q, --quiet</code>
+                                                        </div>
+                                                        &nbsp; Solo muestra los IDs de imagen
+                                                    </li>
+                                                    <li>
+                                                        <div class="code-block ">
+                                                            <code class="code-content ">--tree</code>
+                                                        </div>
+                                                        &nbsp; Muestra las imágenes multiplataforma como árbol <span
+                                                            style="font-size:0.95em;">(Experimental)</span>
+                                                    </li>
+                                                </ul>
 
-                                    Esto descargara la ultima imagen de la version ubuntu
-                                    </p>
+                                                <p>
+                                                    <strong>Ejemplo:</strong>
+                                                <div class="code-block my-3">
+                                                    <button class="btn btn-sm btn-light copy-btn"
+                                                        onclick="copyCode(this)">Copiar</button>
+                                                    <code class="code-content ">docker images</code>
 
-                                    <p>
-                                        Si ya estas usando una imagen de ubuntu, puedes usar docker pull para asegurarte
-                                        de que tengas la ultima version.
-                                    </p>
-                                </header>
+                                                </div>
+                                                Muestra la lista de imágenes locales y sus detalles.
+                                                </p>
+
+                                                <p>
+                                                    <strong>Filtrar imágenes:</strong>
+                                                <div class="code-block my-3">
+                                                    <button class="btn btn-sm btn-light copy-btn"
+                                                        onclick="copyCode(this)">Copiar</button>
+                                                    <code class="code-content ">docker images -f "dangling=true"</code>
+
+                                                </div>
+                                                Muestra solo las imágenes huérfanas ("dangling"), útiles para limpiar el
+                                                sistema.
+                                                </p>
+
+                                                <p>
+                                                    <strong>Obtener solo IDs:</strong>
+                                                <div class="code-block my-3">
+                                                    <button class="btn btn-sm btn-light copy-btn"
+                                                        onclick="copyCode(this)" style="">Copiar</button>
+                                                    <code class="code-content ">docker images -q</code>
+
+                                                </div>
+                                                Esta opción es útil para pasar IDs de imágenes a otros comandos, como
+                                                <code>docker rmi</code>.
+                                                </p>
+
+                                                <p>
+                                                    Puedes consultar la documentación oficial de Docker para ver más
+                                                    ejemplos y
+                                                    todos los filtros y formatos disponibles para
+                                                    <code>docker images</code>.
+                                                </p>
+                                            </span>
+                                        </header>
+                                    </article>
+
+                                    <article id="docker-ps">
+                                        <!-- INSERT_YOUR_CODE -->
+                                        <header>
+                                            <h2>docker ps</h2>
+                                            <span>
+                                                <p>
+                                                    El comando <code>docker ps</code> se usa para listar los
+                                                    contenedores
+                                                    activos en tu sistema Docker. Por defecto, solo muestra los
+                                                    contenedores que
+                                                    están en ejecución, pero puedes ver todos (incluidos los detenidos)
+                                                    y
+                                                    personalizar la salida mediante varias opciones.
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <strong>Básico:</strong>
+                                                        <div class="code-block my-3">
+                                                            <button class="btn btn-sm btn-light copy-btn"
+                                                                onclick="copyCode(this)">Copiar</button>
+                                                            <code class="code-content ">docker ps</code>
+
+                                                        </div>
+                                                        Lista solo los contenedores en ejecución.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Mostrar todos los contenedores (incluso los
+                                                            detenidos):</strong>
+                                                        <div class="code-block my-3">
+                                                            <button class="btn btn-sm btn-light copy-btn"
+                                                                onclick="copyCode(this)">Copiar</button>
+                                                            <code class="code-content ">docker ps -a</code>
+
+                                                        </div>
+                                                        Muestra todos los contenedores, incluso los que están detenidos.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Ver únicamente IDs de contenedores:</strong>
+                                                        <div class="code-block my-3">
+                                                            <button class="btn btn-sm btn-light copy-btn"
+                                                                onclick="copyCode(this)">Copiar</button>
+                                                            <code class="code-content ">docker ps -q</code>
+
+                                                        </div>
+                                                        Útil para scripts donde solo se necesitan los identificadores.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Ver solo el último contenedor creado:</strong>
+                                                        <div class="code-block my-3">
+                                                            <button class="btn btn-sm btn-light copy-btn"
+                                                                onclick="copyCode(this)">Copiar</button>
+                                                            <code class="code-content ">docker ps -l</code>
+
+                                                        </div>
+                                                        Muestra únicamente el último contenedor que fue creado.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Ver los <i>n</i> últimos contenedores creados:</strong>
+                                                        <div class="code-block my-3">
+                                                            <button class="btn btn-sm btn-light copy-btn"
+                                                                onclick="copyCode(this)">Copiar</button>
+                                                            <code class="code-content ">docker ps -n 5</code>
+
+                                                        </div>
+                                                        Muestra los últimos 5 contenedores, sin importar su estado.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Filtrar por criterio (por ejemplo, estado):</strong>
+                                                        <div class="code-block my-3">
+                                                            <button class="btn btn-sm btn-light copy-btn"
+                                                                onclick="copyCode(this)">Copiar</button>
+                                                            <code
+                                                                class="code-content ">docker ps -f "status=exited"</code>
+                                                        </div>
+                                                        Solo muestra los contenedores detenidos (<code>exited</code>).
+                                                    </li>
+                                                    <li>
+                                                        <strong>Mostrar el tamaño que ocupan los archivos del
+                                                            contenedor:</strong>
+                                                        <div class="code-block my-3">
+                                                            <button class="btn btn-sm btn-light copy-btn"
+                                                                onclick="copyCode(this)">Copiar</button>
+                                                            <code class="code-content ">docker ps -s</code>
+                                                        </div>
+                                                        Incluye el tamaño en disco usado por cada contenedor.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Personalizar las columnas de la tabla con
+                                                            formato:</strong>
+                                                        <div class="code-block my-3">
+                                                            <button class="btn btn-sm btn-light copy-btn"
+                                                                onclick="copyCode(this)">Copiar</button>
+                                                            <code
+                                                                class="code-content ">docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"</code>
+                                                        </div>
+                                                        Personaliza las columnas que se muestran en la salida, usando
+                                                        plantillas
+                                                        de Go.
+                                                    </li>
+                                                    <li>
+                                                        <strong>Ver la salida en formato JSON:</strong>
+                                                        <div class="code-block my-3">
+                                                            <button class="btn btn-sm btn-light copy-btn"
+                                                                onclick="copyCode(this)">Copiar</button>
+                                                            <code class="code-content ">docker ps --format json</code>
+                                                        </div>
+                                                        Muestra la información en formato JSON (útil para procesamiento
+                                                        programático o en herramientas externas).
+                                                    </li>
+                                                </ul>
+                                                <p>
+                                                    Puedes consultar la <a
+                                                        href="https://docs.docker.com/engine/reference/commandline/ps/"
+                                                        target="_blank">documentación oficial de Docker</a> para ver más
+                                                    ejemplos, todas las opciones y filtros disponibles para
+                                                <div class="code-block">
+                                                    <button class="btn btn-sm btn-light copy-btn"
+                                                        onclick="copyCode(this)">Copiar</button>
+                                                    <code class="code-content ">docker ps</code>.
+                                                </div>
+                                                </p>
+                                            </span>
+                                        </header>
+                                    </article>
+                                </section>
                             </article>
-
-                            <article id="docker-images">
-                                <header>
-                                    <h2><code>docker images</code></h2>
-                                    <span>
-                                        <div class="image-content center" style="margin-bottom: 15px;">
-                                            <img src="assets/img/docker-images-command.png" alt="docker images ejemplo"
-                                                style="max-width: 350px; width:100%;margin:10px auto 0 auto;display:block;">
-                                            <span class="leyenda">Salida ejemplo del comando
-                                                <code>docker images</code></span>
-                                        </div>
-                                        <p>Lista las imágenes disponibles localmente en tu máquina Docker.</p>
-                                        <strong>Alias:</strong>
-                                        <code>docker image ls</code>,
-                                        <code>docker image list</code>,
-                                        <code>docker images</code>
-                                        <br><br>
-                                        <strong>Uso:</strong>
-                                        <div class="code-block my-3">
-                                            <button class="btn btn-sm btn-light copy-btn"
-                                                onclick="copyCode(this)">Copiar</button>
-                                            <div class="code-block">
-                                                <code
-                                                    class="code-content ">docker images [OPTIONS] [REPOSITORY[:TAG]]</code>
-                                            </div>
-                                        </div>
-                                        <br>
-                                        <strong>Opciones comunes:</strong>
-                                        <ul class="mt-2">
-                                            <li>
-                                                <div class="code-block ">
-                                                    <code class="code-content ">-a, --all</code>
-                                                </div>
-                                                &nbsp; Muestra todas las imágenes (incluidas las intermedias)
-                                            </li>
-                                            <li>
-                                                <div class="code-block ">
-                                                    <code class="code-content ">--digests</code>
-                                                </div>
-                                                &nbsp; Muestra los identificadores digest de las imágenes
-                                            </li>
-                                            <li>
-                                                <div class="code-block ">
-                                                    <code class="code-content ">-f, --filter [filtro]</code>
-                                                </div>
-                                                &nbsp; Filtra la salida según condición (por ejemplo,
-                                                <code>dangling=true</code> para ver imágenes huérfanas)
-                                            </li>
-                                            <li>
-                                                <div class="code-block ">
-                                                    <code class="code-content ">--format [string]</code>
-                                                </div>
-                                                &nbsp; Personaliza la salida usando plantillas Go (ver la <a
-                                                    href="https://docs.docker.com/go/formatting/"
-                                                    target="_blank">documentación oficial</a>)
-                                            </li>
-                                            <li>
-                                                <div class="code-block ">
-                                                    <code class="code-content ">--no-trunc</code>
-                                                </div>
-                                                &nbsp; No trunca la salida (muestra los hashes completos)
-                                            </li>
-                                            <li>
-                                                <div class="code-block ">
-                                                    <code class="code-content ">-q, --quiet</code>
-                                                </div>
-                                                &nbsp; Solo muestra los IDs de imagen
-                                            </li>
-                                            <li>
-                                                <div class="code-block ">
-                                                    <code class="code-content ">--tree</code>
-                                                </div>
-                                                &nbsp; Muestra las imágenes multiplataforma como árbol <span
-                                                    style="font-size:0.95em;">(Experimental)</span>
-                                            </li>
-                                        </ul>
-
-                                        <p>
-                                            <strong>Ejemplo:</strong>
-                                        <div class="code-block my-3">
-                                            <button class="btn btn-sm btn-light copy-btn"
-                                                onclick="copyCode(this)">Copiar</button>
-                                            <div class="code-block">
-                                                <code class="code-content ">docker images</code>
-                                            </div>
-                                        </div>
-                                        Muestra la lista de imágenes locales y sus detalles.
-                                        </p>
-
-                                        <p>
-                                            <strong>Filtrar imágenes:</strong>
-                                        <div class="code-block my-3">
-                                            <button class="btn btn-sm btn-light copy-btn"
-                                                onclick="copyCode(this)">Copiar</button>
-                                            <div class="code-block">
-                                                <code class="code-content ">docker images -f "dangling=true"</code>
-                                            </div>
-                                        </div>
-                                        Muestra solo las imágenes huérfanas ("dangling"), útiles para limpiar el
-                                        sistema.
-                                        </p>
-
-                                        <p>
-                                            <strong>Obtener solo IDs:</strong>
-                                        <div class="code-block my-3">
-                                            <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)"
-                                                style="">Copiar</button>
-                                            <div class="code-block">
-                                                <code class="code-content ">docker images -q</code>
-                                            </div>
-                                        </div>
-                                        Esta opción es útil para pasar IDs de imágenes a otros comandos, como
-                                        <code>docker rmi</code>.
-                                        </p>
-
-                                        <p>
-                                            Puedes consultar la documentación oficial de Docker para ver más ejemplos y
-                                            todos los filtros y formatos disponibles para <code>docker images</code>.
-                                        </p>
-                                    </span>
-                                </header>
-                            </article>
-
-                            <article id="docker-ps">
-                            <!-- INSERT_YOUR_CODE -->
-                                <header>
-                                    <h2>docker ps</h2>
-                                    <span>
-                                        <p>
-                                            El comando <code>docker ps</code> se usa para listar los contenedores activos en tu sistema Docker. Por defecto, solo muestra los contenedores que están en ejecución, pero puedes ver todos (incluidos los detenidos) y personalizar la salida mediante varias opciones.
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                <strong>Básico:</strong>
-                                                <div class="code-block my-3">
-                                                    <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)">Copiar</button>
-                                                    <div class="code-block">
-                                                        <code class="code-content ">docker ps</code>
-                                                    </div>
-                                                </div>
-                                                Lista solo los contenedores en ejecución.
-                                            </li>
-                                            <li>
-                                                <strong>Mostrar todos los contenedores (incluso los detenidos):</strong>
-                                                <div class="code-block my-3">
-                                                    <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)">Copiar</button>
-                                                    <div class="code-block">
-                                                        <code class="code-content ">docker ps -a</code>
-                                                    </div>
-                                                </div>
-                                                Muestra todos los contenedores, incluso los que están detenidos.
-                                            </li>
-                                            <li>
-                                                <strong>Ver únicamente IDs de contenedores:</strong>
-                                                <div class="code-block my-3">
-                                                    <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)">Copiar</button>
-                                                    <div class="code-block">
-                                                        <code class="code-content ">docker ps -q</code>
-                                                    </div>
-                                                </div>
-                                                Útil para scripts donde solo se necesitan los identificadores.
-                                            </li>
-                                            <li>
-                                                <strong>Ver solo el último contenedor creado:</strong>
-                                                <div class="code-block my-3">
-                                                    <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)">Copiar</button>
-                                                    <div class="code-block">
-                                                        <code class="code-content ">docker ps -l</code>
-                                                    </div>
-                                                </div>
-                                                Muestra únicamente el último contenedor que fue creado.
-                                            </li>
-                                            <li>
-                                                <strong>Ver los <i>n</i> últimos contenedores creados:</strong>
-                                                <div class="code-block my-3">
-                                                    <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)">Copiar</button>
-                                                    <div class="code-block">
-                                                        <code class="code-content ">docker ps -n 5</code>
-                                                    </div>
-                                                </div>
-                                                Muestra los últimos 5 contenedores, sin importar su estado.
-                                            </li>
-                                            <li>
-                                                <strong>Filtrar por criterio (por ejemplo, estado):</strong>
-                                                <div class="code-block my-3">
-                                                    <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)">Copiar</button>
-                                                    <div class="code-block">
-                                                        <code class="code-content ">docker ps -f "status=exited"</code>
-                                                    </div>
-                                                </div>
-                                                Solo muestra los contenedores detenidos (<code>exited</code>).
-                                            </li>
-                                            <li>
-                                                <strong>Mostrar el tamaño que ocupan los archivos del contenedor:</strong>
-                                                <div class="code-block my-3">
-                                                    <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)">Copiar</button>
-                                                    <div class="code-block">
-                                                        <code class="code-content ">docker ps -s</code>
-                                                    </div>
-                                                </div>
-                                                Incluye el tamaño en disco usado por cada contenedor.
-                                            </li>
-                                            <li>
-                                                <strong>Personalizar las columnas de la tabla con formato:</strong>
-                                                <div class="code-block my-3">
-                                                    <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)">Copiar</button>
-                                                    <div class="code-block">
-                                                        <code class="code-content ">docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}"</code>
-                                                    </div>
-                                                </div>
-                                                Personaliza las columnas que se muestran en la salida, usando plantillas de Go.
-                                            </li>
-                                            <li>
-                                                <strong>Ver la salida en formato JSON:</strong>
-                                                <div class="code-block my-3">
-                                                    <button class="btn btn-sm btn-light copy-btn" onclick="copyCode(this)">Copiar</button>
-                                                    <div class="code-block">
-                                                        <code class="code-content ">docker ps --format json</code>
-                                                    </div>
-                                                </div>
-                                                Muestra la información en formato JSON (útil para procesamiento programático o en herramientas externas).
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            Puedes consultar la <a href="https://docs.docker.com/engine/reference/commandline/ps/" target="_blank">documentación oficial de Docker</a> para ver más ejemplos, todas las opciones y filtros disponibles para <code>docker ps</code>.
-                                        </p>
-                                    </span>
-                                </header>
-                            </article>
-                        </section>
-                    </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center py-3">
+                        <span>Made with <span style="color: #e25555;">&#10084;&#65039;</span> by <strong>Luis
+                                Mendoza</strong></span>
+                        &ndash;
+                        <a href="https://github.com/DanielMRodriguez" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>

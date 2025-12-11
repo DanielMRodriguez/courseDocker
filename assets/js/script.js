@@ -23,3 +23,32 @@ function copyCode(button) {
         }, 2000);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    function setTheme(theme) {
+        if (theme === 'dark-mode') {
+            document.body.classList.add('dark-mode');
+            if(themeToggle) themeToggle.checked = true;
+        } else {
+            document.body.classList.remove('dark-mode');
+            if(themeToggle) themeToggle.checked = false;
+        }
+    }
+
+    setTheme(currentTheme);
+
+    if(themeToggle){
+        themeToggle.addEventListener('change', function () {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light-mode');
+            }
+        });
+    }
+});
